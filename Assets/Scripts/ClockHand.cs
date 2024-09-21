@@ -44,7 +44,7 @@ public class ClockHand : MonoBehaviour
             Vector3 worldPosition = ray.GetPoint(distance);
             Vector3 direction = worldPosition - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, 0, angle);
+            transform.rotation = Quaternion.Euler(0, 0, angle -90);
         }
 
         _isEditingHand.Value = true;
